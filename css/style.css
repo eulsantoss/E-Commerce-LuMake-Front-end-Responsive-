@@ -1,0 +1,543 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "l h"
+    "m m"
+    "f f";
+}
+
+header {
+    background-color: rgb(37, 37, 37);
+    grid-area: h;
+    width: 100%;
+}
+
+main {
+    grid-area: m;
+}
+
+aside {
+    grid-area: a;
+}
+
+footer {
+    background-color: rgb(37, 37, 37);
+    grid-area: f;
+}
+
+/*Área da Logo*/
+
+#logo {
+    width: 100%;
+    grid-area: l;
+    text-align: end;
+    background-color: rgb(37, 37, 37);
+}
+
+#logo img {
+    width: 45%;
+    min-width: 200px;
+    margin: .2em;
+    
+}
+
+/*Área da Barra de Navegação*/
+
+nav {
+    background-color: rgb(37, 37, 37);
+    margin: .8em 0;
+    margin-left: 3em;
+    /*position: relative;*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    /*position: relative;*/
+}
+
+nav ul li {
+    width: 10em;
+    float: left;
+}
+
+nav a {
+    padding: 15% 20%;
+    display: block;
+    text-decoration: none;
+    background-color: rgb(37, 37, 37);
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/*nav ul ul {
+    position: absolute;
+    visibility: hidden;
+    
+}
+
+nav ul li:hover ul {
+    visibility: visible;
+}*/
+
+nav a:hover {
+    background-color: rgb(71, 71, 71);
+    transition: 300ms;
+}
+
+/*nav ul ul li {
+    float: none;
+    border-bottom: 1px solid rgb(71, 71, 71);
+}*/
+
+.sub-nav {
+    font-size: 1rem;
+}
+
+#promo {
+    color: #C7D300;
+    border-bottom: 3px solid #C7D300;
+}
+
+#promo:hover {
+    color: #C7D300;
+    border-bottom: 3px solid #C7D300;
+}
+
+#catalog {
+    color: #A94A95;
+    border-bottom: 3px solid #A94A95;
+}
+
+.border-b:hover {
+    color: #C7D300;
+    border-bottom: 3px solid #C7D300;
+}
+
+.subm-color:hover {
+    color: #C7D300;
+}
+
+/*Fim da Barra de Navegação*/
+
+/*Botão de voltar ao topo*/
+
+#botao-lateral {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 1%;
+    bottom: 2%;
+    background-color: rgb(218, 218, 218);
+    transition: 700ms;
+    border-radius: 30px;
+    text-align: center;
+    opacity: 70%;
+}
+
+#botao-lateral:hover {
+    opacity: 100%;
+}
+
+#botao-lateral img {
+    width: 90%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/*Fim do botão de voltar ao topo*/
+
+/*Botão do Whatsapp*/
+
+#botao-whatsapp {
+    position: fixed;
+    right: 1%;
+    bottom: 10%;
+    transition: 700ms;
+    border-radius: 30px;
+    text-align: center;
+    opacity: 70%;
+}
+
+#botao-whatsapp:hover {
+    opacity: 100%;
+}
+
+#botao-whatsapp img {
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+}
+
+/*Área de estilização do Main*/
+
+.ilustration {
+    text-align: center;
+}
+
+.ilustration img {
+    width: 100%;
+    
+}
+
+.content {
+    width: 40vw;
+    margin-left: 2rem;
+    
+}
+
+.title {
+    margin: 2rem 0;
+    font-size: 4rem;
+}
+
+.paragraph {
+    width: 50vw;
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+}
+
+.content h2 span#Lu {
+    color: #C7D300;
+}
+
+.content h2 span#Make {
+    color: #A94A95;
+}
+
+hr {
+    margin: 55px;
+    border: .01rem solid grey;
+    opacity: 50%;
+}
+
+/*Área dos Cards*/
+
+.cards {
+    display: grid;
+    grid-template-columns: 47% 47%;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "cl1 cr1"
+    "cl2 cr2";
+    gap: 2rem;
+    margin: 2rem;
+    margin-top: 3rem;
+}
+
+.card {
+    width: 100%;
+    min-width: 300px;
+    max-width: 1000px;
+    min-height: 300px;
+    box-sizing: border-box;
+    box-shadow: 2px 3px 10px 1px rgb(97, 97, 97);
+    border-radius: 15px;
+}
+
+.card:hover {
+    transition: 100ms;
+    box-shadow: 2px 3px 7px 3px rgb(97, 97, 97);
+}
+
+#card-left-1 {
+    grid-area: cl1;
+}
+
+#card-right-1 {
+    grid-area: cr1;
+}
+
+#card-left-2 {
+    grid-area: cl2;
+}
+
+#card-right-2 {
+    grid-area: cr2;
+}
+
+.icon img {
+    width: 15%;
+    min-width: 60px;
+    margin: 1.1rem;
+}
+
+#money-icon {
+    border: 9px solid black;
+    border-radius: 50%;
+}
+
+.icon h2 {
+    width: auto;
+    display: inline-block;
+    font-size: 230%;
+    vertical-align: top;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+.card-content {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.card-content p {
+    font-size: 130%;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-content p a {
+    text-decoration: none;
+    color: #A94A95;
+    transition: 300ms;
+}
+
+.card-content p a:hover {
+    text-decoration: underline;
+    color: #C7D300;
+}
+/*Área do Footer*/
+
+#container-footer {
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "sm pay"
+    "rr rr";
+}
+
+#social-media {
+    grid-area: sm;
+    text-align: center;
+}
+
+#social-media img {
+    width: 35%;
+}
+
+#payments {
+    grid-area: pay;
+    text-align: center;
+}
+
+#copyright {
+    grid-area: rr;
+    text-align: center;
+}
+
+#copyright p {
+    margin: .4rem 0;
+    font-family:sans-serif;
+}
+
+footer ul {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+}
+
+footer ul li {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+footer li img {
+    width: 40%
+}
+
+fieldset {
+    border: none;
+    border-top: 1px solid rgb(87, 87, 87);
+    margin: 1.5rem 0rem;
+    font-size: 1.4rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width: 1280px) {
+    nav {
+        display: none;
+    }
+    
+    .one, .two, .three {
+        background-color: white;
+        height: 4px;
+        width: 100%;
+        margin: 6px auto;
+        transition-duration: 300ms;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height: 30px;
+        margin-right: 20px;
+        margin-top: 20px;
+        position: absolute;
+        right: 0;
+    }
+
+    /*Fullscreen*/
+
+    .menu-section.on {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgb(37, 37, 37);
+        width: 100vw;
+        height: 100vh;
+        z-index: 10;
+    }
+
+    .menu-section.on nav {
+        display: block;
+    }
+
+    .menu-section.on .menu-toggle {
+        position: absolute;
+        right: 0;
+        top: 15;
+    }
+
+    .menu-section.on .menu-toggle .one {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .menu-section.on .menu-toggle .two {
+        opacity: 0;
+    }
+
+    .menu-section.on .menu-toggle .three {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .menu-section.on nav ul {
+        display: block;
+        width: 250px;
+        margin: auto auto;
+        text-align: center;
+    }
+
+    .menu-section.on nav ul li {
+        display: block;
+        float: none;
+    }
+
+    .menu-section.on nav ul li a {
+        transition-duration: 500ms;
+        line-height: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    #logo {
+        z-index: 9;
+    }
+
+    #botao-whatsapp {
+        bottom: 12%;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .card {
+        text-align: center;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+        "l m"
+        "h h"
+        "m m"
+        "a a"
+        "f f";
+    }
+
+    #logo {
+        grid-area: l;
+        text-align: center;
+    }
+
+    header {
+        grid-area: h;
+    }
+
+    main {
+        grid-area: m;
+    }
+
+    aside {
+        grid-area: a;
+    }
+
+    footer {
+        grid-area: f;
+    }
+
+    .content {
+        width: auto;
+        margin: 5px;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .paragraph {
+        width: auto;
+        font-size: 1.5rem;
+        line-height: 2.3rem;
+    }
+
+    .icon img {
+        width: 20%;
+    }
+
+    .icon h2 {
+        display: block;
+        margin: 15px 0px;
+
+    }
+
+    #botao-lateral, #botao-whatsapp {
+        right: 20px;
+    }
+
+    #payments li {
+        display: block;
+    }
+
+    #payments li img {
+        width: 25%;
+    }
+
+    .menu-toggle {
+        grid-area: m;
+    }
+}
